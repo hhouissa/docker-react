@@ -1,0 +1,12 @@
+sudo: required #docker needs sudo9 priovs
+services:
+  -docker #travis please have us a copy of docker installed
+
+
+before_install: #what to be executed before start running our tests
+  - docker build -t hhouissa/docker-react -f Dockerfile.dev . #long tag, we can use any but this one is descriptive
+  
+script: #f any return code not zero travis will mark failure
+  - docker run hhouissa/docker-react npm run test -- --coverage #travis assumes test will exit automatically. what is not the case with npm run test command because it sits and wait for user. So we add -- --coverage
+  
+  

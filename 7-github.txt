@@ -1,3 +1,5 @@
+login to your github account
+create new repo, public
 git@github.com:hhouissa/docker-react.git
 
 https://github.com/hhouissa/docker-react.git
@@ -14,5 +16,25 @@ or push an existing repo from cmd:
 git remote add origin https://github.com/hhouissa/docker-react.git
 git push -u origin master
 
+-----------------now git bash in fronetend dir:
 
+ythemHouissa@HaythemPC MINGW64 /e/Projects/reactproj/frontend (master)
+$ git init
+Initialized empty Git repository in E:/Projects/reactproj/frontend/.git/
+
+HaythemHouissa@HaythemPC MINGW64 /e/Projects/reactproj/frontend (master)
+$ git add .
+
+$ git config --global user.name hhouissa
+$ git config --global user.email hhouissa1@gmail.com
+$ git commit -m "initial commit"
+[master (root-commit) 9aa1a88] initial commit
+ 17 files changed, 15272 insertions(+)
+ create mode 100644 .gitignore
+.....
+-------------------connect local git toi github remote------
+git remote add origin https://github.com/hhouissa/docker-react.git
+
+-------------------Push work to github -------------
+$ git push origin master
 
