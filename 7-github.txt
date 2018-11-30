@@ -1,0 +1,18 @@
+git@github.com:hhouissa/docker-react.git
+
+https://github.com/hhouissa/docker-react.git
+
+or create repo from cmd:
+echo "# docker-react" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hhouissa/docker-react.git
+git push -u origin master
+
+or push an existing repo from cmd:
+git remote add origin https://github.com/hhouissa/docker-react.git
+git push -u origin master
+
+
+
