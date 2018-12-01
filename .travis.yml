@@ -9,4 +9,15 @@ before_install: #what to be executed before start running our tests
 script: #f any return code not zero travis will mark failure
   - docker run hhouissa/docker-react npm run test -- --coverage #travis assumes test will exit automatically. what is not the case with npm run test command because it sits and wait for user. So we add -- --coverage
   
-  
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env" 
+  bucket_name: "elasticbeanstalk-us-east-2-177161960668" #trzvis zips all the app qnd gives it to aws. look for s3 
+  bucket_path: "docker-react"
+  on:
+    branch: master #any time we push code to master from feature, travis will autodeploy
+  access_key_id: "$AWS-ACCESS-KEY"
+  secret_access_key:
+    secure: "AWS_SECRET_KEY"
