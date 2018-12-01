@@ -18,6 +18,6 @@ deploy:
   bucket_path: "docker-react"
   on:
     branch: master #any time we push code to master from feature, travis will autodeploy
-  access_key_id: "$AWS-ACCESS-KEY"
+  access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key:
-    secure: "AWS_SECRET_KEY"
+    secure: "$AWS_SECRET_KEY"
