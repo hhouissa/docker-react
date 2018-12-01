@@ -70,3 +70,6 @@ Total 3 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/hhouissa/docker-react.git
    a45f635..be14c9b  master -> master
+-----------------7.11-- deploy ok on travis, Fail on aws----
+aws degraded: we need to add EXPOSE to Dockerfile used for deployment
+git add commit push 
